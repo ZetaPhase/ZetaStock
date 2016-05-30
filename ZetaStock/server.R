@@ -25,10 +25,29 @@ shinyServer(function(input, output) {
     HTML(paste(str1, str2, str3, sep='<br/>'))
   })
   
+  output$highPlot <- renderPlot({
+    qplot(goClicked()$Date, goClicked()$High, geom="line", ylab="High Price", xlab="Time")
+  })
+  
   output$openPlot <- renderPlot({
+    qplot(goClicked()$Date, goClicked()$Close, geom="line", ylab="Opening Price", xlab="Time")
+  })
+  
+  output$lowPlot <- renderPlot({
+    qplot(goClicked()$Date, goClicked()$Low, geom="line", ylab="Low Price", xlab="Time")
+  })
+  
+  output$closePlot <- renderPlot({
     qplot(goClicked()$Date, goClicked()$Close, geom="line", ylab="Closing Price", xlab="Time")
   })
   
+  output$volumePlot <- renderPlot({
+    qplot(goClicked()$Date, goClicked()$Volume, geom="line", ylab="Volume", xlab="Time")
+  })
+  
+  output$adjclosePlot <- renderPlot({
+    qplot(goClicked()$Date, goClicked()$Adj.Close, geom="line", ylab="Adjusted Closing Price", xlab="Time")
+  })
   
   output$distPlot <- renderPlot({
     

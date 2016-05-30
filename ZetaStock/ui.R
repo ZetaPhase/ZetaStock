@@ -41,18 +41,23 @@ shinyUI(
                mainPanel(plotOutput("openPlot"))
              ),
              tabPanel(
-               "High"
+               "High",
+               mainPanel(plotOutput("highPlot"))
              ),
              tabPanel(
-               "Low"
+               "Low",
+               mainPanel(plotOutput("lowPlot"))
              ),
              tabPanel(
-               "Close"
+               "Close",
+               mainPanel(plotOutput("closePlot"))
              ),
              tabPanel(
-               "Volume"
+               "Volume",
+               mainPanel(plotOutput("volumePlot"))
              ),
              tabPanel(
-               "Adjusted Close"
+               "Adjusted Close",
+               mainPanel(plotOutput("adjclosePlot"))
              )
   ))
