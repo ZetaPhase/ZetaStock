@@ -17,6 +17,8 @@ ZetaStock is a web-based stock analyzer using data retrieved through the Yahoo F
 - `dplyR`
 - `shiny`
 
+Make sure you look at `setup/setup.txt` for more information on setting up.
+
 ZetaStock is built using R's powerful data frames and R Shiny to build the user interface.
 
 (c) 2016, ZetaPhase Technologies Inc, All Rights Reserved.
