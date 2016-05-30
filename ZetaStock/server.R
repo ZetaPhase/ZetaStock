@@ -20,7 +20,7 @@ shinyServer(function(input, output) {
   
   output$home <- renderUI({
     str1 <- paste("ZetaStock is an open-source web-based stock analyzer built with R that provides advanced features such as machine learning.")
-    str2 <- paste("This analyzer was built by Xeliot and 0xFireball from ZetaPhase.")
+    str2 <- paste("This analyzer was built by Xeliot and 0xFireball from ZetaPhase Technologies.")
     str3 <- paste("If you're a developer, feel free to check out the source code on GitHub from the link below!.")
     HTML(paste(str1, str2, str3, sep='<br/>'))
   })
