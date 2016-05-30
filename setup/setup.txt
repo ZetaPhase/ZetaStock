@@ -1,0 +1,13 @@
+Welcome to ZetaStock setup.
+
+Quick Start For Developers:
+
+1. Download the following libraries by going to the package tile in the lower right hand corner of R Studio and clicking install
+2. Download ggplot2 : plotting
+3. Download shiny
+4. Download xts : time series data
+5. You're Ready
+6. Have fun developing!
+
+
+(c) 2016, ZetaPhase Technologies Inc, All Rights Reserved. Licensed under the GPLV3
