@@ -37,7 +37,8 @@ shinyUI(
                )
              ),
              tabPanel(
-               "Open"
+               "Open",
+               mainPanel(plotOutput("openPlot"))
              ),
              tabPanel(
                "High"

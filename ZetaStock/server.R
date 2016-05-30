@@ -14,15 +14,15 @@ library(xts)
 # Define server logic required to draw a histogram
 shinyServer(function(input, output) {
   
-  yahoo.read <- function(url, option){
+  yahoo.read <- function(url){
     dat <- read.table(url,header=TRUE,sep=",")
-    df <- dat[,c("Date", option)]
-    df$Date <- as.Date(as.character(df$Date))
+    #df <- dat[,c("Date", option)]
+    dat$Date <- as.Date(as.character(dat$Date))
     return(dat)
   }
   
   goClicked <- eventReactive(input$go, {
-    fromJSON(txt=paste("http://finance.yahoo.com/d/quotes.csv?s=AAPL+GOOG+MSFT"))
+    yahoo.read(paste("http://real-chart.finance.yahoo.com/table.csv?s=", input$code, "&a=07&b=24&c=2010&d=07&e=24&f=2015&g=d&ignore=.csv", sep=""))
   })
   
   output$home <- renderUI({
@@ -31,6 +31,11 @@ shinyServer(function(input, output) {
     str3 <- paste("For developers, please go to the GitHub Repo below.")
     HTML(paste(str1, str2, str3, sep='<br/>'))
   })
+  
+  output$openPlot <- renderPlot({
+    qplot(goClicked()$Date, goClicked()$Close, geom="line", ylab="Closing Price", xlab="Time")
+  })
+  
   
   output$distPlot <- renderPlot({
     
