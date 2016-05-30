@@ -8,9 +8,22 @@
 #
 
 library(shiny)
+library(ggplot2)
+library(xts)
 
 # Define server logic required to draw a histogram
 shinyServer(function(input, output) {
+  
+  yahoo.read <- function(url, option){
+    dat <- read.table(url,header=TRUE,sep=",")
+    df <- dat[,c("Date", option)]
+    df$Date <- as.Date(as.character(df$Date))
+    return(dat)
+  }
+  
+  goClicked <- eventReactive(input$go, {
+    fromJSON(txt=paste("http://finance.yahoo.com/d/quotes.csv?s=AAPL+GOOG+MSFT"))
+  })
   
   output$home <- renderUI({
     str1 <- paste("ZetaKrypt is a web-based stock analyzer using clean R graphs and machine learning.")
