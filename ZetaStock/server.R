@@ -1,11 +1,4 @@
-#
-# This is the server logic of a Shiny web application. You can run the 
-# application by clicking 'Run App' above.
-#
-# Find out more about building applications with Shiny here:
-# 
-#    http://shiny.rstudio.com/
-#
+# Shiny app logic
 
 library(shiny)
 library(ggplot2)
@@ -26,9 +19,9 @@ shinyServer(function(input, output) {
   })
   
   output$home <- renderUI({
-    str1 <- paste("ZetaKrypt is a web-based stock analyzer using clean R graphs and machine learning.")
+    str1 <- paste("ZetaStock is an open-source web-based stock analyzer built with R that provides advanced features such as machine learning.")
     str2 <- paste("This analyzer was built by Xeliot and 0xFireball from ZetaPhase.")
-    str3 <- paste("For developers, please go to the GitHub Repo below.")
+    str3 <- paste("If you're a developer, feel free to check out the source code on GitHub from the link below!.")
     HTML(paste(str1, str2, str3, sep='<br/>'))
   })
   
