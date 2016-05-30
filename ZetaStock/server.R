@@ -11,7 +11,14 @@ library(shiny)
 
 # Define server logic required to draw a histogram
 shinyServer(function(input, output) {
-   
+  
+  output$home <- renderUI({
+    str1 <- paste("ZetaKrypt is a web-based stock analyzer using clean R graphs and machine learning.")
+    str2 <- paste("This analyzer was built by Xeliot and 0xFireball from ZetaPhase.")
+    str3 <- paste("For developers, please go to the GitHub Repo below.")
+    HTML(paste(str1, str2, str3, sep='<br/>'))
+  })
+  
   output$distPlot <- renderPlot({
     
     # generate bins based on input$bins from ui.R
