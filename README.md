@@ -14,10 +14,10 @@ ZetaStock is a web-based stock analyzer using data retrieved through the Yahoo F
 ### Quick Start For Developers
 
 #### Required Libraries
-- `dplyR`
-- `shiny`
-- `ggplot2`
-- `xts`
+- `dplyR` - data frame filtering library
+- `shiny` - web app library
+- `ggplot2` - comparison plots
+- `xts` - timeseries
 
 Make sure you look at `setup/setup.txt` for more information on setting up.
 
