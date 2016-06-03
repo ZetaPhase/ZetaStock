@@ -16,7 +16,7 @@ shinyUI(
              tabPanel(
                "Home",
                sidebarLayout(
-                 tags$img(src="https://raw.githubusercontent.com/ZetaPhase/ZetaKrypt/master/ZetaKrypt/img/ZetaKrypt-logo.png", width="256", height="256"),
+                 tags$img(src="https://raw.githubusercontent.com/ZetaPhase/ZetaStock/ae1c1ce3b3621f007d7a803df3f603ee1075f985/zetastock.png", width="256", height="256"),
                  mainPanel(
                    h3(tags$p("Welcome to ZetaStock, a stock analyzer developed by ZetaPhase Technologies.")),
                    textInput(
