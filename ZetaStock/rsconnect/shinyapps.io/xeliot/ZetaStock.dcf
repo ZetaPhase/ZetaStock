@@ -2,8 +2,8 @@ name: ZetaStock
 account: xeliot
 server: shinyapps.io
 appId: 105334
-bundleId: 466405
+bundleId: 470060
 url: https://xeliot.shinyapps.io/ZetaStock/
-when: 1464634470.5759
+when: 1464922112.08071
 asMultiple: FALSE
 asStatic: FALSE
