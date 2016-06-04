@@ -1,5 +1,7 @@
 # ZetaStock
 
+![Logo](zetastock.png)
+
 ZetaStock is a web-based stock analyzer using data retrieved through the Yahoo Finance API.
 
 ### Features
