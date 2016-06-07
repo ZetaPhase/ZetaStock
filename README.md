@@ -20,7 +20,7 @@ ZetaStock is a web-based stock analyzer using data retrieved through the Yahoo F
 - `shiny` - web app library
 - `ggplot2` - comparison plots
 - `xts` - timeseries
-- `e1071` - machine learning implementation
+- `e1071` - machine learning implementation library
 
 Make sure you look at `setup/setup.txt` for more information on setting up.
 
